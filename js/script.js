@@ -4,7 +4,7 @@ const links = document.querySelectorAll(".header-menu a")
 function ativarLink(link) {
     const url = location.href
     const href = link.href
-    if(url.includes(href)) {
+    if (url.includes(href)) {
         link.classList.add("ativo");
     }
 }
@@ -16,7 +16,7 @@ const parametros = new URLSearchParams(location.search);
 
 function ativarProduto(parametro) {
     const elemento = document.getElementById(parametro);
-    if(elemento) {
+    if (elemento) {
         elemento.checked = true;
     }
 }
@@ -61,3 +61,8 @@ function eventosGaleria(img) {
 }
 
 galeria.forEach(eventosGaleria);
+
+// Animação
+if (window.SimpleAnime) {
+    new SimpleAnime();
+}
